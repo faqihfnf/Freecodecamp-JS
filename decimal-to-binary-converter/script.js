@@ -2,8 +2,21 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-function decimalToBinary(input) {
+function countdown(number) {
+  console.log(number);
+  if (number === 0) {
+    console.log("Reached base case");
+    return;
+  } else {
+    countdown(number - 1);
+    console.log(number);
+  }
+}
+
+countdown(3);
+const decimalToBinary = (input) => {
   let binary = "";
+
   if (input === 0) {
     binary = "0";
   }
@@ -14,7 +27,7 @@ function decimalToBinary(input) {
   }
 
   result.innerText = binary;
-}
+};
 
 const checkUserInput = () => {
   if (
@@ -25,6 +38,7 @@ const checkUserInput = () => {
     alert("Please provide a decimal number greater than or equal to 0");
     return;
   }
+
   decimalToBinary(parseInt(numberInput.value));
   numberInput.value = "";
 };
