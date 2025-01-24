@@ -27,6 +27,13 @@ const getMode = (array) => {
 
 const getRange = (array) => Math.max(...array) - Math.min(...array);
 
+const getVariance = (array) => {
+  const mean = getMean(array);
+  const variance =
+    array.reduce((acc, el) => acc + (el - mean) ** 2, 0) / array.length;
+  return variance;
+};
+
 const calculate = () => {
   const value = document.querySelector("#numbers").value;
   const array = value.split(/,\s*/g);
