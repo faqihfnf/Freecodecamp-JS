@@ -33,6 +33,16 @@ const spreadsheetFunctions = {
   sum,
   average,
   median,
+  even: (nums) => nums.filter(isEven),
+  someeven: (nums) => nums.some(isEven),
+  everyeven: (nums) => nums.every(isEven),
+  firsttwo: (nums) => nums.slice(0, 2),
+  lasttwo: (nums) => nums.slice(-2),
+  has2: (nums) => nums.includes(2),
+  increment: (nums) => nums.map((num) => num + 1),
+  random: ([x, y]) => Math.floor(Math.random() * y + x),
+  range: (nums) => range(...nums),
+  nodupes: (nums) => [...new Set(nums)],
 };
 
 const applyFunction = (str) => {
@@ -108,5 +118,9 @@ const update = (event) => {
   const element = event.target;
   const value = element.value.replace(/\s/g, "");
   if (!value.includes(element.id) && value.startsWith("=")) {
+    element.value = evalFormula(
+      value.slice(1),
+      Array.from(document.getElementById("container").children)
+    );
   }
 };
