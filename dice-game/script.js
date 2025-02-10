@@ -40,6 +40,13 @@ const updateRadioOption = (index, score) => {
   scoreSpans[index].textContent = `, score = ${score}`;
 };
 
+const updateScore = (selectedValue, achieved) => {
+  score += parseInt(selectedValue);
+  totalScoreElement.textContent = score;
+
+  scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
+};
+
 const getHighestDuplicates = (arr) => {
   const counts = {};
 
@@ -108,5 +115,33 @@ rulesBtn.addEventListener("click", () => {
   } else {
     rulesBtn.textContent = "Show rules";
     rulesContainer.style.display = "none";
+  }
+});
+
+keepScoreBtn.addEventListener("click", () => {
+  let selectedValue;
+  let achieved;
+
+  for (const radioButton of scoreInputs) {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+      achieved = radioButton.id;
+      break;
+    }
+  }
+
+  if (selectedValue) {
+    rolls = 0;
+    round++;
+    updateStats();
+    resetRadioOptions();
+    updateScore(selectedValue, achieved);
+    if (round > 6) {
+      setTimeout(() => {
+        alert(`Game Over! Your total score is ${score}`);
+      }, 500);
+    }
+  } else {
+    alert("Please select an option or roll the dice");
   }
 });
