@@ -29,3 +29,5 @@ const displayAuthors = (authors) => {
     </div>`;
   });
 };
+
+loadMoreBtn.addEventListener("click", fetchMoreAuthors);
