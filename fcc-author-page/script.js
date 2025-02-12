@@ -13,7 +13,10 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
   })
   .catch((err) => console.error(`There was an error: ${err}`));
 
-const fetchMoreAuthors = () => {};
+const fetchMoreAuthors = () => {
+  startingIndex += 8;
+  endingIndex += 8;
+};
 
 const displayAuthors = (authors) => {
   authors.forEach(({ author, image, url, bio }, index) => {
