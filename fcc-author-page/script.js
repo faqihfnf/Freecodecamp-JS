@@ -16,6 +16,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 const fetchMoreAuthors = () => {
   startingIndex += 8;
   endingIndex += 8;
+  displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 };
 
 const displayAuthors = (authors) => {
