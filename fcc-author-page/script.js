@@ -12,4 +12,6 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
   })
   .catch((err) => console.error(`There was an error: ${err}`));
 
-const displayAuthors = (authors) => {};
+const displayAuthors = (authors) => {
+  authors.forEach();
+};
