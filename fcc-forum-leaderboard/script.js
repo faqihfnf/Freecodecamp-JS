@@ -30,5 +30,6 @@ const showLatestPosts = (data) => {
       category_id,
       bumped_at,
     } = item;
+    return `<tr></tr>`;
   });
 };
