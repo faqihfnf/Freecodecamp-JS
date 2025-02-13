@@ -32,7 +32,9 @@ const showLatestPosts = (data) => {
         bumped_at,
       } = item;
       return `<tr>
-      <td></td>
+      <td>
+      <p class="post-title">${title}</p>
+      </td>
       <td></td>
       <td></td>
       <td></td>
