@@ -56,11 +56,13 @@ const timeAgo = (time) => {
 };
 
 const viewCount = (views) => {
+  const thousands = Math.floor(views / 1000);
+
   if (views >= 1000) {
-    return `${Math.floor(views / 1000)}k`;
-  } else {
-    return views;
+    return `${thousands}k`;
   }
+
+  return views;
 };
 
 const fetchData = async () => {
