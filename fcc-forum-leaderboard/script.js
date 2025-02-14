@@ -26,6 +26,7 @@ const forumCategory = (id) => {
     const { category, className } = allCategories[id];
     selectedCategory.className = className;
     selectedCategory.category = category;
+  } else {
   }
 };
 
