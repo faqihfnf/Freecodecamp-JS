@@ -20,7 +20,9 @@ const allCategories = {
   },
 };
 
-const forumCategory = (id) => {};
+const forumCategory = (id) => {
+  let selectedCategory = {};
+};
 
 const timeAgo = (time) => {
   const currentTime = new Date();
