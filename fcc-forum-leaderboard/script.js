@@ -65,6 +65,8 @@ const viewCount = (views) => {
   return views;
 };
 
+const avatars = (posters, users) => {};
+
 const fetchData = async () => {
   try {
     const res = await fetch(forumLatest);
