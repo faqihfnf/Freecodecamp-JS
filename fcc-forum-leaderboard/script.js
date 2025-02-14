@@ -39,7 +39,9 @@ const showLatestPosts = (data) => {
       <td>
       ${posts_count - 1}
       </td>
-      <td></td>
+      <td>
+      ${views}
+      </td>
       <td></td>
         </tr>`;
     })
