@@ -22,5 +22,7 @@ class Player {
       x: 0,
       y: 0,
     };
+    this.height = proportionalSize(40);
+    this.width = proportionalSize(40);
   }
 }
