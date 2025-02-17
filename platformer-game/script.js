@@ -8,3 +8,4 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 const gravity = 0.5;
 let isCheckpointCollisionDetectionActive = true;
+const proportionalSize = (size) => {};
