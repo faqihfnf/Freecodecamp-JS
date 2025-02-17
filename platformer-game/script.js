@@ -31,5 +31,6 @@ class Player {
   }
   update() {
     this.draw();
+    this.position.x += this.velocity.x;
   }
 }
