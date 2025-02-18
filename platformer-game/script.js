@@ -64,6 +64,8 @@ const animate = () => {
     player.position.x > proportionalSize(100)
   ) {
     player.velocity.x = -5;
+  } else {
+    player.velocity.x = 0;
   }
 };
 
