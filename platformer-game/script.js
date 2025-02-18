@@ -43,6 +43,7 @@ class Player {
       this.velocity.y = 0;
     }
     if (this.position.x < this.width) {
+      this.position.x = this.width;
     }
   }
 }
