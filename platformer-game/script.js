@@ -53,7 +53,9 @@ class Player {
 
 const player = new Player();
 
-const animate = () => {};
+const animate = () => {
+  requestAnimationFrame(animate);
+};
 
 const startGame = () => {
   canvas.style.display = "block";
