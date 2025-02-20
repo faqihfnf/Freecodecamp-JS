@@ -84,6 +84,8 @@ const movePlayer = (key, xVelocity, isPressed) => {
     player.velocity.y = 0;
     return;
   }
+  switch (key) {
+  }
 };
 
 const startGame = () => {
