@@ -100,6 +100,10 @@ const animate = () => {
       platforms.forEach((platform) => {
         platform.position.x -= 5;
       });
+    } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach((platform) => {
+        platform.position.x += 5;
+      });
     }
   }
 };
