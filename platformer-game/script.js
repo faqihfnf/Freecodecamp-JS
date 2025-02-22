@@ -118,6 +118,7 @@ const animate = () => {
       player.velocity.y = 0;
       return;
     }
+    const platformDetectionRules = [];
   });
 };
 
