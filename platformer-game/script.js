@@ -57,6 +57,7 @@ class Platform {
       x,
       y,
     };
+    this.width = 200;
   }
 }
 
