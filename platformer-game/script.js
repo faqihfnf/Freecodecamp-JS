@@ -118,7 +118,7 @@ const animate = () => {
       player.velocity.y = 0;
       return;
     }
-    const platformDetectionRules = [];
+    const platformDetectionRules = [player.position.x >= platform.position.x - player.width / 2];
   });
 };
 
