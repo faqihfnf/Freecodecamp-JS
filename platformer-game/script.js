@@ -110,3 +110,5 @@ const startGame = () => {
 };
 
 startBtn.addEventListener("click", startGame);
+
+window.addEventListener("keydown", ({ key }) => {});
